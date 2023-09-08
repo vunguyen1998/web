@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐỌC TRUYỆN ONLINE</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preload" href="/static/js/main_events.js" as="script">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body itemscope="" itemtype="http://schema.org/WebPage">
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="toggle-nav" title="Open menu" onclick="$('.main-nav-mobile').slideToggle()"></div>
+            <h1 class="logo">
+                <a href="/">ĐỌC TRUYỆN ONLINE</a>
+            </h1>
+            
+            <div class="main-nav-mobile">
+                <ul class="main-nav">
+                    <!-- Thể loại -->
+                    <li>
+                        <a href="#" rel="nofollow">
+                            <i class="fa-tags">
+    
+                            </i>
+                            Thể loại
+                        </a>
+                        <ul>
+                            <li>
+                                <a title="Truyện tiên hiệp" href="https://dtruyen.com/tien-hiep/">
+                                    <i class="fa fa-tags"></i>
+                                    Tiên Hiệp
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện kiếm hiệp" href="https://dtruyen.com/kiem-hiep/">
+                                    <i class="fa fa-tags"></i>
+                                    Kiếm hiệp
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện xuyên không" href="https://dtruyen.com/xuyen-khong/">
+                                    <i class="fa fa-tags"></i>
+                                    Xuyên không
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện hệ thống" href="https://dtruyen.com/he-thong/">
+                                    <i class="fa fa-tags"></i>
+                                    Hệ thống
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Sắp xếp -->
+                    <li>
+                        <a href="#" rel="nofollow">
+                            <i class="fa-tags"></i>
+                            Sắp xếp
+                        </a>
+                        <ul>
+                            <li>
+                                <a title="Truyện dịch" href="https://dtruyen.com/truyen-dich/" class="vip-links">
+                                    <i class="fa fa-diamond"></i>
+                                    Truyện dịch
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện dịch" href="https://dtruyen.com/truyen-dich/" class="vip-links">
+                                    <i class="fa fa-refresh"></i>
+                                    Truyện convert
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện kiếm hiệp" href="https://dtruyen.com/all/">
+                                    <i class="fa fa-diamond"></i>
+                                    Kiếm hiệp
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Truyện hệ thống" href="https://dtruyen.com/he-thong/">
+                                    <i class="fa fa-diamond"></i>
+                                    Hệ thống
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Đăng truyện -->
+                    <li style="background:#df1a0c;">
+                        <a href="https://dtruyen.com/author/session/login/" title="Đăng truyện" rel="nofollow" target="_blank">
+                            <i class="fa fa-cloud-upload"></i> 
+                            Đăng truyện
+                        </a>
+                    </li>
+    
+                    <li>
+                        <!-- Search form -->
+                        <div id="search_form" itemscope="" itemtype="https://schema.org/WebSite"> 
+                            <meta itemprop="url" content="https://dtruyen.com/"> 
+                            <form itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction" role="search" method="get" action="https://dtruyen.com/search/"> 
+                                <meta itemprop="target" content="https://dtruyen.com/search/?key={key}"> 
+                                <input itemprop="query-input" type="text" id="key" name="key" aria-label="Từ khóa tìm kiếm" placeholder="Tìm truyện, tác giả..." autocomplete="off"> 
+                                <button name="action_search" id="searchsubmit" type="submit" aria-label="Tìm kiếm">
+                                    <i class="fa fa-search"></i>
+                                </button> 
+                            </form> 
+                            <div id="search_result"></div> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- User pannel -->
+            <div id="userPanel"><a href="#" rel="nofollow" class="login-btn" title="Đăng nhập"><i class="fa fa-user"></i> Thành viên</a></div>
+
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main" class="main" data-type="home" role="main" itemscope="" itemprop="mainContentOfPage">
+        <div class="container">
+            <!-- Cột trái -->
+            <aside class="left-sidebar">
+                <!-- Thể loại truyện -->
+                <section class="card-box">
+                    <header>Thể loại truyện</header>
+                    <div class="categories clearfix">
+                        <!-- Start loop -->
+                        <a href="https://dtruyen.com/tien-hiep/" title="Tiên hiệp">Tiên hiệp</a>
+                        <a href="https://dtruyen.com/tien-hiep/" title="Tiên hiệp">Kiếm hiệp</a>
+                        <a href="https://dtruyen.com/tien-hiep/" title="Tiên hiệp">Xuyên không</a>
+                        <a href="https://dtruyen.com/tien-hiep/" title="Tiên hiệp">Hệ thống</a>
+                        <a href="https://dtruyen.com/tien-hiep/" title="Tiên hiệp">Hiện đại</a>
+                        <!-- End loop -->
+                    </div>
+                </section>
+
+                <!-- TOP truyện hay -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/truyen-duoc-xem-nhieu-nhat/" title="Top Truyện Hay">
+                            Top Truyện Hay 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <div class="top-stories">
+                        <ul>
+                            <!-- Start loop -->
+                            <li class="story-top" data-id="3910" itemscope="" itemtype="https://schema.org/Book">
+                                <meta itemprop="bookFormat" content="EBook"> 
+                                <h3 class="title" itemprop="name">
+                                    <a href="https://dtruyen.com/ngao-the-dan-than/" itemprop="url" title="Ngạo Thế Đan Thần">Ngạo Thế Đan Thần</a>
+                                </h3> 
+                                <p class="viewed">
+                                    <i class="fa fa-eye"></i> 294,421,952
+                                </p>
+                            </li>
+                            <!-- End loop -->
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Truyện mới đăng -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/truyen-moi-dang/" title="Truyện mới đăng">
+                            Truyện mới đăng 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <div class="top-stories">
+                        <ul>
+                            <!-- Start loop -->
+                            <li class="story-top" data-id="3910" itemscope="" itemtype="https://schema.org/Book">
+                                <meta itemprop="bookFormat" content="EBook"> 
+                                <h3 class="title" itemprop="name">
+                                    <a href="https://dtruyen.com/ngao-the-dan-than/" itemprop="url" title="Ngạo Thế Đan Thần">Ngạo Thế Đan Thần</a>
+                                </h3> 
+                                <p class="viewed">
+                                    <i class="fa fa-eye"></i> 294,421,952
+                                </p>
+                            </li>
+                            <!-- End loop -->
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Review truyện -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/review/" title="Review Truyện">
+                            Review Truyện 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <ul class="review-list">
+                        <!-- Start loop -->
+                        <li class="news-item clearfix"> 
+                            <a href="https://dtruyen.com/review/top-truyen-xuyen-khong/" class="thumb" title="Top truyện xuyên không được đề cử tháng 8-2021" rel="nofollow">
+                                <img src="https://img.dtruyen.com/public/images/news/toptruyenxuyenkhongvVFcC.jpg" data-layzr="https://img.dtruyen.com/public/images/news/toptruyenxuyenkhongvVFcC.jpg" width="60" height="42" alt="Top truyện xuyên không được đề cử tháng 8-2021">
+                            </a> 
+                            <h4 class="title">
+                                <a href="https://dtruyen.com/review/top-truyen-xuyen-khong/" title="Top truyện xuyên không được đề cử tháng 8-2021">Top truyện xuyên không được đề cử tháng 8-2021</a>
+                            </h4>
+                        </li>
+                        <!-- End loop -->
+                    </ul>
+
+                    <footer> 
+                        <a class="show-more-btn" rel="nofollow" title="Truyện Full" href="https://dtruyen.com/review/">
+                            XEM THÊM 
+                            <i class="fa fa-angle-down"></i>
+                        </a> 
+                    </footer>
+                </section>
+            </aside>
+
+            <!-- Cột chính -->
+            <div class="main-col">
+                <!-- Truyện đề cử -->
+                <section class="card-box">
+                    <header>
+                        <h2>
+                            TRUYỆN ĐỀ CỬ
+                        </h2>
+                    </header>
+
+                    <nav>
+                        <a href="https://dtruyen.com/truyen-ngon-tinh-hay/" title="Truyện Ngôn Tình Hay">Ngôn Tình</a>
+                        <a href="https://dtruyen.com/truyen-truyen-teen-hay/" title="Truyện Teen Hay">Truyện Teen</a>
+                        <a href="https://dtruyen.com/truyen-tien-hiep-hay/" title="Truyện Tiên Hiệp Hay">Tiên Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-kiem-hiep-hay/" title="Truyện Kiếm Hiệp Hay">Kiếm Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-xuyen-khong-hay/" title="Truyện Xuyên Không Hay">Xuyên Không</a>
+                    </nav>
+
+                    <div class="swipe-stories">
+                        <ul data-max="2" data-paged="1">
+                            <!-- Start loop -->
+                            <li>
+                                <div class="story-hot" data-id="41512" itemscope itemtype="https://schema.org/Book">
+                                    <meta itemprop="bookFormat" content="EBook">
+                                    <a href="https://dtruyen.com/thap-nien-70-doan-sung-thien-kim-that/" title="[Thập Niên 70] Đoàn Sủng Thiên Kim Thật" class="thumb"> 
+                                        <img src="https://img.dtruyen.com/public/images/medium/thapnien70doansungthienkimthat6trKhHC.jpg" data-layzr="https://img.dtruyen.com/public/images/medium/thapnien70doansungthienkimthat6trKhHC.jpg" itemprop="image" class="cover" width="164" height="211" alt="[Thập Niên 70] Đoàn Sủng Thiên Kim Thật"> 
+                                    </a>
+                                    <div class="info"> 
+                                        <h3 class="title" itemprop="name">
+                                            <a href="https://dtruyen.com/thap-nien-70-doan-sung-thien-kim-that/" itemprop="url" title="[Thập Niên 70] Đoàn Sủng Thiên Kim Thật">
+                                                [Thập Niên 70] Đoàn Sủng Thiên Kim Thật
+                                            </a>
+                                        </h3> 
+                                        <p class="last-chapter">Full</p> 
+                                        <meta itemprop="author" content="Mi Nhãn Khiển Quyển"> 
+                                    </div>
+                                    <span class="label-status-end"></span>
+                                    <span class="label-hot-1"></span>
+                                    <label class="label label-type-2"></label>
+                                </div>
+                            </li>
+                            <!-- End loop -->
+
+                        </ul>
+
+                        <a href="#" rel="nofollow" class="direction-btn prev" title="Prev"><i class="fa fa-angle-left"></i></a>
+                        <a href="#" rel="nofollow" class="direction-btn next disabled" title="Next"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                </section>
+
+                <!-- Truyện dịch chọn lọc -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/truyen-dich/" title="Truyện Dịch Chọn lọc">
+                            TRUYỆN DỊCH CHỌN LỌC 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <div class="grid-stories">
+                        <!-- Start loop -->
+                        <div class="story-grid" data-id="46425" itemscope="" itemtype="https://schema.org/Book">
+                            <meta itemprop="bookFormat" content="EBook"> 
+                            <a href="https://dtruyen.com/trong-sinh-hao-mon-nu-hoc-ba-dai-chien-thuong-truong/" title="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường" class="thumb"> 
+                                <img src="https://img.dtruyen.com/public/images/medium/trongsinhhaomonnuhocbadaichienthuongtruongH8AWbgU.jpg" data-layzr="https://img.dtruyen.com/public/images/medium/trongsinhhaomonnuhocbadaichienthuongtruongH8AWbgU.jpg" itemprop="image" class="cover" width="164" height="211" alt="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường"> 
+                                <label class="label label-type-2"></label> 
+                            </a> 
+                            <div class="info"> 
+                                <h3 class="title" itemprop="name">
+                                    <a href="https://dtruyen.com/trong-sinh-hao-mon-nu-hoc-ba-dai-chien-thuong-truong/" itemprop="url" title="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường">
+                                        Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường
+                                    </a>
+                                </h3> 
+                                <p class="last-chapter">Chương 522</p> 
+                                <meta itemprop="author" content="Tô Noãn Sắc"> 
+                            </div>
+                            <span class="label-status-ongoing"></span>
+                            <span class="label-hot-0"></span>
+                        </div>
+                        <!-- End loop -->
+                    </div>
+
+                    <footer> 
+                        <a class="show-more-btn" rel="nofollow" title="TRUYỆN DỊCH CHỌN LỌC" href="https://dtruyen.com/truyen-dich/">
+                            XEM THÊM 
+                            <i class="fa fa-angle-down"></i>
+                        </a> 
+                    </footer>
+                </section>
+
+                <!-- Truyện mới cập nhật -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/all/" title="Truyện Mới Cập Nhật">
+                            Truyện Mới Cập Nhật 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <nav>
+                        <a href="https://dtruyen.com/truyen-ngon-tinh-hay/" title="Truyện Ngôn Tình Hay">Ngôn Tình</a>
+                        <a href="https://dtruyen.com/truyen-truyen-teen-hay/" title="Truyện Teen Hay">Truyện Teen</a>
+                        <a href="https://dtruyen.com/truyen-tien-hiep-hay/" title="Truyện Tiên Hiệp Hay">Tiên Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-kiem-hiep-hay/" title="Truyện Kiếm Hiệp Hay">Kiếm Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-xuyen-khong-hay/" title="Truyện Xuyên Không Hay">Xuyên Không</a>
+                    </nav>
+
+                    <div class="list-stories">
+                        <ul>
+                            <!-- Start loop -->
+                            <li class="story-list" data-id="28392" itemscope="" itemtype="https://schema.org/Book">
+                                <meta itemprop="bookFormat" content="EBook"> 
+                                <div class="info"> 
+                                    <h3 class="title" itemprop="name">
+                                        <a href="https://dtruyen.com/tro-lai-thap-nien-60-quan-tau-toan-nang/" itemprop="url" title="Trở Lại Thập Niên 60: Quân Tẩu Toàn Năng">
+                                            Trở Lại Thập Niên 60: Quân Tẩu Toàn Năng
+                                        </a>
+                                    </h3> 
+                                    <span class="vip-2"></span> 
+                                    <label class="label label-type-2"></label> 
+                                    <meta itemprop="author" content="Hồ Đồ"> 
+                                </div> 
+                                <div class="last-chap"> <p class="last-chapter">Full</p> <i class="last-updated">Mới đây</i> </div>
+                            </li>
+                            <!-- End loop -->
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Truyện full -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/all/" title="Truyện Full">
+                            Truyện Full 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <nav>
+                        <a href="https://dtruyen.com/truyen-ngon-tinh-hay/" title="Truyện Ngôn Tình Hay">Ngôn Tình</a>
+                        <a href="https://dtruyen.com/truyen-truyen-teen-hay/" title="Truyện Teen Hay">Truyện Teen</a>
+                        <a href="https://dtruyen.com/truyen-tien-hiep-hay/" title="Truyện Tiên Hiệp Hay">Tiên Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-kiem-hiep-hay/" title="Truyện Kiếm Hiệp Hay">Kiếm Hiệp</a>
+                        <a href="https://dtruyen.com/truyen-xuyen-khong-hay/" title="Truyện Xuyên Không Hay">Xuyên Không</a>
+                    </nav>
+
+                    <div class="grid-stories">
+                        <!-- Start loop -->
+                        <div class="story-grid" data-id="46425" itemscope="" itemtype="https://schema.org/Book">
+                            <meta itemprop="bookFormat" content="EBook"> 
+                            <a href="https://dtruyen.com/trong-sinh-hao-mon-nu-hoc-ba-dai-chien-thuong-truong/" title="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường" class="thumb"> 
+                                <img src="https://img.dtruyen.com/public/images/medium/trongsinhhaomonnuhocbadaichienthuongtruongH8AWbgU.jpg" data-layzr="https://img.dtruyen.com/public/images/medium/trongsinhhaomonnuhocbadaichienthuongtruongH8AWbgU.jpg" itemprop="image" class="cover" width="164" height="211" alt="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường"> 
+                                <label class="label label-type-2"></label> 
+                            </a> 
+                            <div class="info"> 
+                                <h3 class="title" itemprop="name">
+                                    <a href="https://dtruyen.com/trong-sinh-hao-mon-nu-hoc-ba-dai-chien-thuong-truong/" itemprop="url" title="Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường">
+                                        Trọng Sinh Hào Môn: Nữ Học Bá Đại Chiến Thương Trường
+                                    </a>
+                                </h3> 
+                                <p class="last-chapter">Chương 522</p> 
+                                <meta itemprop="author" content="Tô Noãn Sắc"> 
+                            </div>
+                            <span class="label-status-end"></span>
+                            <span class="label-hot-0"></span>
+                        </div>
+                        <!-- End loop -->
+                    </div>
+
+                    <footer> 
+                        <a class="show-more-btn" rel="nofollow" title="Truyện Full" href="https://dtruyen.com/truyen-full/">
+                            XEM THÊM 
+                            <i class="fa fa-angle-down"></i>
+                        </a> 
+                    </footer>
+                </section>
+
+                <!-- Truyện ngắn -->
+                <section class="card-box">
+                    <header>
+                        <a href="https://dtruyen.com/truyen-ngan/" title="Truyện Ngắn">
+                            Truyện Ngắn 
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </header>
+
+                    <div class="short-stories clearfix">
+                        <div class="large">
+                            <div class="short-story"> 
+                                <a class="thumb" href="https://dtruyen.com/truyen-ngan/anh-trang-va-ke-hai-long/" title="Ánh Trăng Và Kẻ Hai Lòng">
+                                    <img src="https://img.dtruyen.com/public/images/aassanhtrangvakehailongnDWdcWAlo4.jpg" data-layzr="https://img.dtruyen.com/public/images/aassanhtrangvakehailongnDWdcWAlo4.jpg" itemprop="image" class="cover" width="345" height="213" alt="Ánh Trăng Và Kẻ Hai Lòng">
+                                </a> 
+                                <h4 class="title">
+                                    <a href="https://dtruyen.com/truyen-ngan/anh-trang-va-ke-hai-long/" title="Ánh Trăng Và Kẻ Hai Lòng">Ánh Trăng Và Kẻ Hai Lòng</a>
+                                </h4> 
+                            </div>
+                        </div>
+
+                        <div class="small">
+                            <!-- Start loop , max 4-->
+                            <div class="short-story clearfix"> 
+                                <a class="thumb" href="https://dtruyen.com/truyen-ngan/cau-toi-mai-mot-doi-yeu-em/" title="Cầu Tôi Mãi Một Đời Yêu Em">
+                                    <img src="https://img.dtruyen.com/public/images/small/aasscautoimaimotdoiyeuemPSAHvETDRI.jpg" data-layzr="https://img.dtruyen.com/public/images/small/aasscautoimaimotdoiyeuemPSAHvETDRI.jpg" itemprop="image" class="cover" width="81" height="47" alt="Cầu Tôi Mãi Một Đời Yêu Em">
+                                </a> 
+                                <h4 class="title">
+                                    <a href="https://dtruyen.com/truyen-ngan/cau-toi-mai-mot-doi-yeu-em/" title="Cầu Tôi Mãi Một Đời Yêu Em">
+                                        Cầu Tôi Mãi Một Đời Yêu Em
+                                    </a>
+                                </h4> 
+                            </div>
+                            <!-- End loop -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer"> 
+        <div class="footer-links container" id="footer-links"> 
+            <h4>Top truyện nổi bật của tháng</h4> 
+            <a href="/hay-nham-mat-khi-anh-den/" title="hãy nhắm mắt khi anh đến">hãy nhắm mắt khi anh đến</a>
+            <a href="/bac-tong-phong-luu/" title="bac tong phong luu">bac tong phong luu</a>
+            <a href="/tu-duong/" title="tử dương">tử dương</a>
+            <a href="/dai-thieu-gia-em-lay-cau/" title="đại thiếu gia em lạy cậu">đại thiếu gia em lạy cậu</a>
+            <a href="/trong-sinh-hao-mon-anh-hai-dung-chay/" title="Trọng Sinh Hào Môn">Trọng Sinh Hào Môn</a>
+            <a href="/me-17-tuoi-con-trai-thien-tai-cha-phuc-hac/" title="mẹ 17 tuổi con trai thiên tài cha phúc hắc">mẹ 17 tuổi con trai thiên tài cha phúc hắc</a>
+            <a href="/ep-yeu-100-ngay/" title="ep yeu 100">ep yeu 100</a>
+            <a href="/tag/ngon-tinh-nguoc/" title="Ngôn Tình Ngược">Ngôn Tình Ngược</a>
+            <a href="/tuyet-ung-linh-chu/" title="tuyết ưng lĩnh chủ">tuyết ưng lĩnh chủ</a>
+            <a href="/vat-trong-tay/" title="vật trong tay">vật trong tay</a>
+        </div> 
+        <div class="container"> 
+            <div class="main-col">Website 
+                <a title="đọc truyện online" href="/">đọc truyện</a> online chất lượng hàng đầu việt nam, với nhiều 
+                <a title="Truyện Tiên Hiệp" href="/tien-hiep/">truyện tiên hiệp</a>, 
+                <a title="Truyện Kiếm Hiệp" href="/kiem-hiep/">truyện kiếm hiệp</a>, 
+                <a title="truyen ngon tinh" href="/ngon-tinh/">truyện ngôn tình</a>, 
+                <a title="truyen teen" href="/truyen-teen/">truyện teen</a>, 
+                <a title="Truyện Đô Thị" href="/do-thi/">truyện đô thị</a> được tác giả và dịch giả chọn lọc và đăng tải. Truy cập website nghĩa là bạn đã đồng ý với các quy định và điều khoản của chúng tôi. Vui lòng đọc kỹ các thông tin liên quan ở phía dưới. 
+                <p>
+                    <a rel="nofollow" href="/privacy-policy/" title="Privacy Policy">Chính sách bảo mật</a> &nbsp; - &nbsp;
+                    <a rel="nofollow" href="/terms/" title="Terms">Điều khoản sử dụng</a> &nbsp; - &nbsp;
+                    <a rel="nofollow" href="/content-rules/" title="Content Rules">Quy định về nội dung</a> &nbsp; - &nbsp;
+                    <a rel="nofollow" href="/right-holders/" title="DMCA Guidelines">Vấn đề bản quyền</a> &nbsp; - &nbsp;
+                    <a rel="nofollow" href="/confidental/" title="Privacy agreement">Thỏa thuận quyền riêng tư</a> 
+                </p> 
+                <p> Website hoạt động dưới 
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Giấy phép truy cập mở Creative Commons Attribution 4.0 International License.</a>. 
+                </p> 
+                <script src="https://img.dtruyen.com/public/frontend/desk/js/DMCABadgeHelper.min.js"></script> 
+                <a href="https://www.dmca.com/Protection/Status.aspx?ID=8474e935-28de-489e-a6dc-dc6e1d98563c&amp;refurl=/" title="DMCA.com Protection Program" class="dmca-badge" rel="nofollow" target="_blank"> 
+                    <img src="/dmca.png" data-layzr="/dmca.png" alt="DMCA.com Protection Status" width="75" height="36">
+                </a> 
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" title="Creative Commons License">
+                    <img height="15" width="80" alt="Creative Commons License" style="border-width: 0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" data-layzr="https://i.creativecommons.org/l/by/4.0/80x15.png">
+                </a> 
+            </div> 
+            <div class="right-sidebar"> 
+                <p>Copyright 
+                    <i class="fa fa-copyright"></i> 2023 
+                    <a title="" href="/">WebDocTruyen.Com</a>
+                </p> 
+            </div> 
+        </div>
+    </footer>
+
+    <noscript id="deferred-styles"><link rel="stylesheet" type="text/css" href="/style.css"></noscript>
+    <noscript id="deferred-scripts">/static/js/main_events.js</noscript>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/home.js"></script>
+    <script src="/static/js/main_events.js"></script>
+</body>
+</html>

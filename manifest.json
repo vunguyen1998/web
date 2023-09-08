@@ -1,0 +1,55 @@
+{
+    "name": "Tiệm Trà Hoa 1998",
+    "short_name": "Trà Hoa 1998",
+    "description": "Tiệm Trà Hoa 1998 - trà tốt cho sức khỏe, thạch Aiyu thanh mát với giá rẻ nhất!!",
+    "icons": [
+        {
+            "src": "/img/logo.webp",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "120x120",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo.webp",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/?standalone=true",
+    "display": "standalone",
+    "background_color": "#fcf9d3",
+    "theme_color": "#fcf9d3",
+    "lang": "vi",
+    "author": "Tiệm Trà Hoa 1998"
+}
